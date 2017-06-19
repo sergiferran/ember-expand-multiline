@@ -27,7 +27,7 @@ Cras velit erat, cursus at tincidunt ac, blandit et purus. Sed urna risus, conva
   `);
 
   let lineHeight = 16 * 1.15;
-  assert.equal(Math.floor(this.$().height()), Math.floor(lineHeight * 2));
+  assert.ok(Math.floor(Math.abs(this.$().height()) - Math.floor(lineHeight * 2)) < lineHeight / 2);
   assert.equal(this.$('.expand-multiline.default .expander').length, 1);
   assert.equal(this.$('.expand-multiline.default .collapser').length, 0);
 
@@ -37,7 +37,7 @@ Cras velit erat, cursus at tincidunt ac, blandit et purus. Sed urna risus, conva
   assert.ok(Math.floor(this.$().height()) > Math.floor(lineHeight * 2));
 
   this.$('.expand-multiline.default .collapser a').click();
-  assert.equal(Math.floor(this.$().height()), Math.floor(lineHeight * 2));
+  assert.ok(Math.floor(Math.abs(this.$().height()) - Math.floor(lineHeight * 2)) < lineHeight / 2);
   assert.equal(this.$('.expand-multiline.default .expander').length, 1);
   assert.equal(this.$('.expand-multiline.default .collapser').length, 0);
 
@@ -46,7 +46,7 @@ Cras velit erat, cursus at tincidunt ac, blandit et purus. Sed urna risus, conva
       Short text
     {{/expand-multiline}}
   `);
-  assert.equal(Math.floor(this.$().height()), Math.floor(lineHeight * 1));
+  assert.ok(Math.floor(Math.abs(this.$().height()) - Math.floor(lineHeight * 1)) < lineHeight / 2);
   assert.equal(this.$('.expand-multiline.default .expander').length, 0);
   assert.equal(this.$('.expand-multiline.default .collapser').length, 0);
 });
