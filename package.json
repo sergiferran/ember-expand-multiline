@@ -1,24 +1,29 @@
 {
   "name": "ember-expand-multiline",
-  "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "version": "0.0.1",
+  "description": "Make a multiline div expandable and show only a few lines",
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "expand",
+    "expandable",
+    "multiline",
+    "readmore"
   ],
   "license": "MIT",
-  "author": "",
+  "author": "sergiferran",
   "directories": {
     "doc": "doc",
     "test": "tests"
   },
-  "repository": "",
+  "repository": "https://github.com/sergiferran/ember-expand-multiline.git",
   "scripts": {
     "build": "ember build",
     "start": "ember server",
     "test": "ember try:each"
   },
   "dependencies": {
-    "ember-cli-babel": "^5.1.7"
+    "ember-cli-babel": "^5.1.7",
+    "ember-cli-htmlbars": "^1.0.10"
   },
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.5",
@@ -35,12 +40,10 @@
     "ember-cli-sri": "^2.1.0",
     "ember-cli-test-loader": "^1.1.0",
     "ember-cli-uglify": "^1.2.0",
-    "ember-data": "^2.10.0",
     "ember-disable-prototype-extensions": "^1.1.0",
     "ember-export-application-global": "^1.0.5",
     "ember-load-initializers": "^0.5.1",
     "ember-resolver": "^2.0.3",
-    "ember-welcome-page": "^1.0.3",
     "loader.js": "^4.0.10"
   },
   "engines": {
