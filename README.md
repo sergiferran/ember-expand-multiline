@@ -28,7 +28,7 @@ It's advisable to run `ember g ember-expand-multiline` between upgrades as depen
 
 ###Properties
 
-| Tables        | Default  | Definition  |
+| Property        | Default  | Definition  |
 | ------------- |:--------:| -----------:|
 | theme         | default  | Main class of the component |
 | visibleLines  | 2        | Visible lines when collapsed |

@@ -28,18 +28,18 @@ Cras velit erat, cursus at tincidunt ac, blandit et purus. Sed urna risus, conva
 
   let lineHeight = 16 * 1.15;
   assert.equal(Math.floor(this.$().height()), Math.floor(lineHeight * 2));
-  assert.equal(this.$('.expand-multiline-expander-default').length, 1);
-  assert.equal(this.$('.expand-multiline-collapser-default').length, 0);
+  assert.equal(this.$('.expand-multiline.default .expander').length, 1);
+  assert.equal(this.$('.expand-multiline.default .collapser').length, 0);
 
-  this.$('.expand-multiline-expander-default a').click();
-  assert.equal(this.$('.expand-multiline-expander-default').length, 0);
-  assert.equal(this.$('.expand-multiline-collapser-default').length, 1);
+  this.$('.expand-multiline.default .expander a').click();
+  assert.equal(this.$('.expand-multiline.default .expander').length, 0);
+  assert.equal(this.$('.expand-multiline.default .collapser').length, 1);
   assert.ok(Math.floor(this.$().height()) > Math.floor(lineHeight * 2));
 
-  this.$('.expand-multiline-collapser-default a').click();
+  this.$('.expand-multiline.default .collapser a').click();
   assert.equal(Math.floor(this.$().height()), Math.floor(lineHeight * 2));
-  assert.equal(this.$('.expand-multiline-expander-default').length, 1);
-  assert.equal(this.$('.expand-multiline-collapser-default').length, 0);
+  assert.equal(this.$('.expand-multiline.default .expander').length, 1);
+  assert.equal(this.$('.expand-multiline.default .collapser').length, 0);
 
   this.render(hbs `
     {{#expand-multiline visibleLines=2}}
@@ -47,6 +47,6 @@ Cras velit erat, cursus at tincidunt ac, blandit et purus. Sed urna risus, conva
     {{/expand-multiline}}
   `);
   assert.equal(Math.floor(this.$().height()), Math.floor(lineHeight * 1));
-  assert.equal(this.$('.expand-multiline-expander-default').length, 0);
-  assert.equal(this.$('.expand-multiline-collapser-default').length, 0);
+  assert.equal(this.$('.expand-multiline.default .expander').length, 0);
+  assert.equal(this.$('.expand-multiline.default .collapser').length, 0);
 });
