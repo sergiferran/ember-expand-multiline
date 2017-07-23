@@ -1,6 +1,6 @@
 {
   "name": "ember-expand-multiline",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Make a multiline div expandable and show only a few lines",
   "keywords": [
     "ember-addon",

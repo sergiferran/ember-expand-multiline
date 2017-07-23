@@ -2,9 +2,9 @@
 {{#if isOverflowed}}
   {{#if isExpanded}}
     {{#if showLess}}
-      <div class="expand-multiline-bar collapser"><a {{action (action (mut isExpanded) false)}} >{{collapseText}}</a></div>
+      <div class="expand-multiline-bar collapser"><a {{action (action (mut isExpanded) false) bubbles=bubbles}} >{{collapseText}}</a></div>
     {{/if}}
   {{else}}
-    <div class="expand-multiline-bar expander"><a {{action (action (mut isExpanded) true)}} >{{expandText}}</a></div>
+    <div class="expand-multiline-bar expander"><a {{action (action (mut isExpanded) true) bubbles=bubbles}} >{{expandText}}</a></div>
   {{/if}}
 {{/if}}

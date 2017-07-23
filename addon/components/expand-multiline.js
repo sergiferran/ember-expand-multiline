@@ -25,6 +25,8 @@ export default Ember.Component.extend({
     return true;
   }),
 
+  bubbles: true,
+
   _theme: 'default',
   _visibleLines: 2,
   _showLess: true,
